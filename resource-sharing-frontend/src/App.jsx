@@ -97,6 +97,9 @@ import ViewQRs from "./pages/viewQr";
 import ResourceSearch from "./pages/Resource-search";
 import UploadItem from "./components/UploadItem";
 import ItemList from "./components/ItemList";
+import UploadEvent from "./components/UploadEvent";
+import ShowEvents from "./components/ShowEvents";
+import Home from "./components/Home";
 
 function App() {
   const location = useLocation();
@@ -126,6 +129,7 @@ function App() {
 
             {/* Private Routes */}
             <Route element={<PrivateRoute />}>
+              <Route path="/home" element={<Home />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/request" element={<RequestList />} />
               <Route path="/resource" element={<ResourceList />} />
@@ -137,6 +141,8 @@ function App() {
               <Route path="/ask-us" element={<ResourceSearch />} />
               <Route path="/upload-items" element={<UploadItem />} />
               <Route path="/items-lists" element={<ItemList />} />
+              <Route path="/upload-event" element={<UploadEvent />} />
+              <Route path="/list-event" element={<ShowEvents />} />
             </Route>
           </Routes>
         </div>

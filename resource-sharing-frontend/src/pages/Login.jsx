@@ -129,7 +129,7 @@ const Login = () => {
 
       if (response.token) {
         login(response.token);
-        navigate("/request");
+        navigate("/home");
       } else {
         setError(response.error || "Invalid credentials");
       }
